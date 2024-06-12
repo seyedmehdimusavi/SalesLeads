@@ -1,0 +1,16 @@
+<div class="div">
+    <h1>Submit sales Lead Form</h1>
+    <form [formGroup]="salesLeadForm" (ngSubmit)="OnSubmit()">
+        <div>
+            <lable for="name">Name:</lable>
+            <input id="name" formControlName="name" type="text">
+        </div>
+
+        <div>
+            <lable for="name">Phone number:</lable>
+            <input id="phone" formControlName="phone" type="number">
+        </div>
+        <button type="submit" [disable]="!seleLeadForm.valid">Submit</button>
+    </form>
+    <p *ngIf="responseMessage">{{responseMessage}}</p>
+</div>
